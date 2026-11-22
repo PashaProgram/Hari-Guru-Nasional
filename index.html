@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Untukmu, Guru — Dear Teachers</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap nav"><a class="brand" href="#">Untukmu, Guru <small>sebuah surat dari kami</small></a><nav class="links"><a href="#tentang">Tentang</a><a href="#surat">Surat untuk Guru</a><a href="#penutup">Penutup</a></nav><button class="music-open" id="musicToggle"><span class="dot"></span> ♫ Lagu untukmu</button></div></header>
+
+<aside class="music-panel" id="musicPanel" aria-label="Pemutar musik">
+  <div class="music-head"><b>Musik pengiring ♫</b><button id="musicClose" aria-label="Tutup">×</button></div>
+  <div class="now-playing"><div class="album">♫</div><div class="track-info"><strong id="currentTitle">Pilih lagu</strong><small id="currentArtist">Tekan tombol putar untuk memulai</small></div></div>
+  <div class="controls"><button id="prevTrack" aria-label="Lagu sebelumnya">⏮</button><button class="main-play" id="playPause" aria-label="Putar">▶</button><button id="nextTrack" aria-label="Lagu berikutnya">⏭</button></div>
+  <input class="progress" id="progress" type="range" min="0" max="100" value="0">
+  <div class="time-row"><span id="elapsed">0:00</span><span id="duration">0:00</span></div>
+  <div class="playlist" id="playlist"></div>
+  <p class="music-hint">Lagu tidak diputar otomatis. Tekan tombol putar untuk memulai.</p>
+</aside>
+
+<main>
+<section class="hero"><div class="wrap hero-grid"><div><div class="kicker">Untuk semua yang telah membimbing kami</div><h1>Selamat<br>Hari <em>Guru.</em></h1><p>Sebuah surat digital dari kami untuk seluruh Bapak dan Ibu Guru SMKN 2 Cikarang Barat.</p><div class="actions"><a class="btn" href="#surat">Baca surat kami ↗</a><a class="btn outline" href="#tentang">Tentang halaman</a></div></div><div class="hero-art"><div class="flower">✿</div><div class="hero-frame"><div class="hero-photo">🌷</div><h3>Untukmu, Guru</h3><p>Terima kasih telah menjadi bagian dari perjalanan kami.</p></div><div class="photo-small"><div>♡</div><span>little moments, big memories</span></div></div></div></section>
+
+<section class="section about" id="tentang"><div class="wrap about-grid"><div><div class="overline">Sebuah alasan sederhana</div><div class="about-mark">“terima<br>kasih”</div></div><div class="about-copy"><div class="overline">Tentang halaman ini</div><h2>Hal kecil, dengan <em>rasa yang besar.</em></h2><p class="lead">Website ini dibuat sebagai bentuk apresiasi dan ucapan terima kasih dari siswa kepada seluruh Bapak dan Ibu Guru.</p><p>Di tengah kesibukan sekolah, mungkin tidak semua rasa terima kasih sempat disampaikan secara langsung.</p></div></div></section>
+
+<section class="section letters" id="surat"><div class="wrap"><div class="section-head"><div><div class="overline">Pesan dari siswa</div><h2>Surat kecil <em>untukmu.</em></h2></div><p>Setiap kartu mewakili satu pesan dari siswa untuk guru yang dituju. Nama pengirim tidak ditampilkan.</p></div><div class="letter-count-row"><strong id="letterCount">0</strong><span>pesan · pengirim anonim</span></div><div class="letter-grid" id="letterGrid"></div><div class="letter-pagination" id="letterPagination" hidden></div></div></section>
+
+<section class="closing" id="penutup"><div class="wrap"><div class="overline">Dengan penuh rasa terima kasih</div><h2>Untukmu, Guru.<br><em>Selalu berarti.</em></h2><p>Selamat Hari Guru. Semoga Bapak dan Ibu selalu diberi kesehatan, kebahagiaan, dan semangat untuk terus menyalakan hal-hal baik.</p><a class="btn" href="#">Kembali ke awal ↑</a></div></section>
+</main>
+
+<footer><div class="wrap foot"><span>♡ Untukmu, Guru</span><span>Disiapkan dengan hangat oleh OSIS · SMKN 2 Cikarang Barat</span></div></footer>
+
+<div class="modal" id="modal"><div class="modal-card"><button class="close" id="modalClose">×</button><div class="overline">Sebuah pesan kecil</div><h3 id="modalTitle"></h3><p id="modalBody"></p></div></div>
+
+<audio id="audio" preload="none"></audio>
+
+<script src="js/letters.js"></script>
+<script src="js/app.js"></script>
+</body></html>
